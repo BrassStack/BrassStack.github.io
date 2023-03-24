@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>New Tab</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <link rel="stylesheet" href="jQuery-contextMenu/jquery.contextMenu.css" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jQuery-contextMenu/jquery.ui.position.js"></script>
+    <script src="jQuery-contextMenu/jquery.contextMenu.js"></script>
+    <script src="homepage.js"></script>
+</head>
+
+<body onload="initPage();">
+    <!-- <div>
+            <a href="javascript:debugFunc();">Do Something</a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="javascript:debugFunc2();">Clear Data</a>
+            </div> -->
+    <div id="addLink" onclick="showAddDialogue();">+</div>
+    <div id="importExportLink" onclick="showImportExportDialogue();">1</div>
+    <menu id="addDialogue" class="hidden">
+        <h1>Add a Page</h1>
+        <h2>URL</h2>
+        <input id="inputUrl" type="text" />
+        <h2>Label</h2>
+        <input id="inputLabel" type="text" />
+        <h2>Image Source</h2>
+        <input id="inputImg" type="text" />
+        <h2>Section Name</h2>
+        <input id="inputSection" type="text" />
+        <button onclick="addNewLink();">Add</button>
+        <button onclick="cancelAddLink();">Cancel</button>
+    </menu>
+    <menu id="importExportDialogue" class="hidden">
+        <h1>Import / Export</h1>
+        <h3>Copy and save the below text to backup your sections and pages.<br />Replace the below with your backed-up text to
+            load your backup.</h3>
+        <textarea id="importExportText" wrap="off"></textarea>
+        <button onclick="importContent();">Import</button>
+        <button onclick="closeImportExport();">Close</button>
+    </menu>
+
+    <div class="xhtml">
+        <div class="xbody">
+            <main id="slide">
+                <menu id="header"></menu>
+                <div id="sections"></div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
