@@ -1,6 +1,6 @@
 // REMOVE THIS LINE WHEN UPLOADING TO A WEB SERVER //
 // This allows you to use localStorage on a local file in IE if you have the localhost IP address in trusted sites
-!localStorage && (l = location, p = l.pathname.replace(/(^..)(:)/, "$1$$"), (l.href = l.protocol + "//127.0.0.1" + p));
+// !localStorage && (l = location, p = l.pathname.replace(/(^..)(:)/, "$1$$"), (l.href = l.protocol + "//127.0.0.1" + p));
 /////////////////////////////////////////////////////
 
 /**
